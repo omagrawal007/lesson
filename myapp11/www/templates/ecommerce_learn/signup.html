@@ -1,0 +1,81 @@
+<ion-view  class="screen5-bg" style="overflow: auto;">
+  <ion-content class="login">
+    <div class="overlay"></div>
+    <div class="content">
+        <h4 class="learn-screen-text fontfamilyclass signupmainheading"  >Complete profile</h4>
+        <br>
+                <div class="fontfamilyclass signupheading" >
+                    confirm your sigup information to <br>complete the process and get started </div>
+                    <br>
+
+                    <div class="signupSecondheading"> You can enter your bank info later when you can market or selling your L < ssons.
+                    </div>
+                 
+            <form ng-submit="signup()">
+
+                  <div class="list">
+
+
+                <div class="item item-input-inset signupbox">
+                  
+                    <input type="text" ng-model="user_info.f_name"  class="signupinputbox"  placeholder="First Name">
+                  
+                </div>
+
+
+
+                 <div class="item item-input-inset signupbox">
+                    
+                    <input type="text" ng-model="user_info.l_name"  class="signupinputbox"  placeholder="Last Name">
+                    
+                </div>
+
+
+                 <div class="item item-input-inset signupbox">
+                 
+                    <input type="text" ng-model="user_info.n_name"  class="signupinputbox" placeholder="Nickname- Will be used instead of real name">
+                    
+                </div>
+                 <div class="item item-input-inset signupbox">
+                    
+                    <input type="text" class="signupinputbox" ng-model="user_info.e_name"   placeholder="Email for account verfication">
+                
+                </div>
+
+
+                <div class="item item-input-inset signupbox">
+                    
+                    <input type="text" ng-model="user_info.ce_name" class="signupinputbox"   placeholder="confirm verification email">
+                    
+                </div>
+                 <div class="item item-input-inset signupbox">
+                    
+                    <input type="password"  ng-model="user_info.password" class="signupinputbox"  placeholder="Password">
+                    
+                </div>
+                
+                <span style="margin-left: 8% !important;float: left;line-height: 1px;color:#999;margin-bottom: 2%;margin-top: 3%;">Birthdate</span>
+                <div class="item item-input-inset signupbox">
+
+
+                    <input type="date"  class="signupinputbox"  placeholder="Enter Date Of Birth" ng-model="user_info.dob">
+
+                </div>
+
+
+              
+            <button class="button  button-light btncolor"  style="margin-top: 3%;">Complete Signup</button>
+
+
+                </div>
+
+            </form>
+
+
+
+
+
+
+    </div>
+  </ion-content>
+</ion-view>

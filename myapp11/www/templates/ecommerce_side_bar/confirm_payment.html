@@ -1,0 +1,188 @@
+<ion-popover-view  style="overflow: auto;">
+    
+    <ion-content>
+    <div class="confirmBox">
+     	<div class="row" style="margin: 3%;">
+     		Would you like to purchase this lesson?
+
+     	</div>
+
+     	<div class="row" ng-if="cardDetail==1" style="color:#d4d5d6">
+     		<div class="col col-60">
+     			Credit card information
+
+     		</div>
+     		<div class="col col-40">
+     			Change Method
+
+
+     		</div>
+
+
+     	</div>
+
+     	<br>
+
+     	<div class="row" style="line-height: 16px;">
+
+     		<div class="col col-60">Subtotal:</div>
+     		<div class="col col-40">$1.00</div>
+
+
+     	</div>
+
+
+     	<div class="row" style="line-height: 16px;">
+
+     		<div class="col col-60">Lsn fees:</div>
+     		<div class="col col-40">$0.25</div>
+     	</div>
+
+
+
+     	<div class="row" style="line-height: 16px;">
+
+     		<div class="col col-60">Total:</div>
+     		<div class="col col-40">$1.25</div>
+     	</div>
+
+     	<div class="row">
+     		<button class="button" ng-if="cardDetail==0" ng-click="confirm_payment_btn()" style="min-width: 97%;
+    min-height: 21%;background-color:#47a;color:white;margin-top: 5%;margin-left: 2%;" >Confirm Purchase</button>
+
+
+    <button class="button" ng-if="cardDetail==1" ng-click="close_payement()" style="min-width: 97%;
+    min-height: 21%;background-color:#47a;color:white;margin-top: 5%;margin-left: 2%;" >Confirm Purchase</button>
+
+
+
+     	</div>
+
+</div>
+
+
+<!-- Scond step start here-->
+<div ng-if="confirm==1">
+     	<div class="row" style="background-color:white;" >
+            You need to add a payment method
+     	</div>
+     	<button class="button" style="min-width: 97%;
+    min-height: 21%;background-color:#c30b0b;color:white;margin-left: 2%;" ng-click="addCard();">Add Payment Method</button>
+    <br>
+
+</div>
+
+<!--Scond step end here -->
+
+<!--Third step start here -->
+
+
+<div class="list" ng-if="addcarvalue==1">
+
+	<div >
+	<div class="row">
+		<div class="col col-80" style="text-align:left">
+			Choose a payment method
+		</div>
+		<div class="col col-20" style="text-align:right;color:red" ng-click="cancel_payment()">
+			Cancel
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-20"><img src="img/payment/Credit-Card.png" style="width: 27px;" ></div>
+		<div class="col col-60">Credit Card</div>
+		<div class="col col-20" ng-click="add_credit_card()">Choice</div>
+	</div>
+	<hr style="margin-top: -4%;">
+	<div class="row">
+		<div class="col col-20"><img src="img/payment/apple.png" style="width: 27px;" ></div>
+		<div class="col col-60">Apple Pay</div>
+		<div class="col col-20">Choice</div>
+	</div>
+	<hr style="margin-top: -4%;">
+	<div class="row">
+		<div class="col col-20"><img src="img/payment/google-wallet.ico" style="width: 27px;" ></div>
+		<div class="col col-60">Google Wallet</div>
+		<div class="col col-20">Choice</div>
+	</div>
+	<hr style="margin-top: -4%;">
+	<div class="row">
+		<div class="col col-20"><img src="img/payment/paypal.png" style="width: 27px;" ></div>
+		<div class="col col-60">Paypal</div>
+		<div class="col col-20">Choice</div>
+	</div>
+	<hr style="margin-top: -4%;">
+</div>
+
+
+</div>
+<!-- Third step end here -->
+
+<!--four step start here -->
+
+<div class="list" ng-if="cardinfo==1">
+	<div class="row">
+		<div class="col col-80" style="text-align:left">
+			Enter payment details
+		</div>
+		<div class="col col-20" style="text-align:right;color:red" ng-click="cancel_payment()">
+			Cancel
+		</div>
+	</div>
+	<div class="row">
+		<img src="img/payment/Credit-Card.png" style="    width: 29px;height: 27px;margin-left: 4%;" ><span style="margin-left: 2%;">Credit Card</span>
+	</div>
+	<div class="row">
+		 <input type="text" class="card_input" placeholder="Name">
+		</div>
+		<div class="row">
+
+		
+			 <input type="text" class="card_input" placeholder="Card Number">
+
+		</div>
+
+		<div class="row">
+			<div class="col col-20">
+				<input type="text" class="payment_date" placeholder="02"> 
+			</div>
+			<span style="margin-top: 4%;font-size: 25px;">/</span>
+			<div class="col col-20">
+				<input type="text" class="payment_date"  placeholder="17">
+			</div>
+
+			<div class="col col-20" style="text-align:right;    margin-top: 3%;">
+			CVV
+			</div>
+			<div class="col col-40">
+				
+				<input type="text" class="payment_date"  placeholder="000" style="width: 87%;">
+			</div>
+
+
+
+		</div>
+
+		<div class="row">
+			<button class="button" ng-click="finalStep()" style="min-width: 97%;
+    min-height: 21%;background-color:#47a;color:white;    margin-top: 7%;margin-bottom: 14%;" >Add Payment Method</button>
+
+
+		</div>
+
+
+
+
+
+
+</div>
+
+
+<!-- four step end here -->
+
+
+
+
+
+    </ion-content>
+  </ion-popover-view>

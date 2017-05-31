@@ -1,0 +1,31 @@
+<ion-view class="login-bg" style="overflow: auto;">
+  <ion-content class="login">
+    <div class="overlay"></div>
+    <div class="content" >
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="img/blue_white_full.png" />
+
+        <form ng-submit="login()">
+        <div class="divider">
+         <div class="item item-input-inset signupbox">
+                 
+                    <input type="text" class="signupinputbox" ng-model="user_info.email" placeholder="Enter Email">
+                   
+                </div>
+
+
+                 <div class="item item-input-inset signupbox">
+               
+                    <input type="password" class="signupinputbox" ng-model="user_info.user_password"  placeholder="Enter Password">
+                    
+                </div>
+
+            <button class="item item-input-inset signupbox" style="    padding-left: 37%!important;    background-color: #47a;color: white !important;">Sign In</button>
+      
+    </div>
+    </form>
+  </ion-content>
+</ion-view>

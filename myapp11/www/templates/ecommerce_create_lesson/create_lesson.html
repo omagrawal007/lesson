@@ -1,0 +1,86 @@
+<ion-view  class="myaccount" style="overflow: auto;">
+  <ion-content class="login">
+    
+        <div class="create_lesson_logo">
+         Create a l< sson
+            </div>
+<br>
+<br>
+<br>
+
+<form ng-submit="startLession()">
+            <div class="list ">
+   <label class="item item-input item-stacked-label">
+   <span class="input-label btncolor fontfamilyclass ">Title of lesson</span>
+   <input type="text" class="create_lesson_inputbox" ng-model="lesson_info.title_name" placeholder="">
+   </label>
+
+   <label class="item item-input item-stacked-label">
+   <span class="input-label btncolor fontfamilyclass" >Tag your lesson so people can find it</span>
+   <input type="text" class="create_lesson_inputbox" ng-model="lesson_info.tag_name" placeholder="">
+   </label>
+
+   <label class="item item-input item-stacked-label">
+   <span class="input-label btncolor fontfamilyclass">Decription of the video</span>
+   <textarea class="create_lesson_inputbox" rows="4" ng-model="lesson_info.description" cols="50"></textarea>
+   </label>
+
+ 
+
+
+<div class="row">
+    <div class='col col-50'>
+          <label class="btncolor fontfamilyclass">Lesson price</label>
+          <input type="button" ng-click="lesson_info.lessonPrice='5'" class=" button btn_create_lesson" placeholder="" value="$5">
+          
+    </div>
+     <div class='col col-50'>
+          <label class="btncolor fontfamilyclass">Lesson Rating</label>
+          <input type="button" ng-model="lesson_info.lession_rate" ng-click="lesson_info.lession_rate='MA'" class=" button btn_create_lesson" placeholder="" value="MA">
+          
+    </div>
+
+   </div>
+
+
+
+     <div class="row">
+    <div class='col col-50'>
+          <label class="btncolor fontfamilyclass">Select media type</label>
+          <!-- ion-ios-mic    ion-ios-videocam-outline -->
+          <!-- <input type="button" class=" button btn_create_hard" placeholder="" value="$5"> -->
+          
+
+
+            <div class="button btn_create_hard icon  ion-ios-mic"  ng-click="lesson_info.lesson_type='audio'">            
+          </div>
+
+
+
+    </div>
+     <div class='col col-20'>
+          <label class="btncolor fontfamilyclass"><br></label>
+          <div class="button btn_create_hard icon  ion-ios-videocam" ng-click="lesson_info.lesson_type='video'">            
+          </div>
+     </div>
+
+   </div>
+
+
+   <div class="row">
+
+    <div class="col">  
+           <button class="button  button-light fontfamilyclass create_lesson_start_lesson"  style="background-color:#085285;color:white;">Start Your Lesson</button>
+    </div>
+
+
+
+
+   </div>
+
+</div>
+</form>
+
+   
+  </ion-content>
+</ion-view>

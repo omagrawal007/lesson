@@ -1,0 +1,88 @@
+<ion-view style="overflow: auto;"  class="myaccount">
+  <ion-content class="login" ng-init="getLesson();">
+      <div class="row">
+        <img src="img/logo-img.png"  class="img-logo" style="width:7%">
+        <img src="img/ecommerce/beauty.jpg"  style="width: 100%;height:214px;">
+        <h1 class="img-text">$1</h1>
+      </div>
+      <div class="row">
+        <div class="col col-90">
+            <label class="item-input-wrapper">
+            <i class="icon icon ion-search placeholder-icon search-icon"></i>
+            <input type="search" placeholder="Search"  ng-model="search_text.$" style="background-color: #eee;height: 33px;width: 100%;text-align: center;">
+            <i class="icon ion-ios-close-outline placeholder-icon search-icon"></i>
+            </label>
+          </div>
+          <div class="col" ng-click="filterBarShow()">
+            <i class="icon ion-levels sort-icon btncolor"></i>
+          </div>
+      </div>
+      <div class="row" ng-if="isFilter=='true'">
+        <div class="col col-33 sort-tabs" ng-click="orderField='title_name'"> Sort by A-Z 
+          <i class="icon ion-arrow-up-c  btncolor"></i>
+          <i class="icon ion-arrow-down-c  btncolor"></i>
+         </div>
+        <div class="col col-33 sort-tabs" ng-click="orderField='lession_price'">Sort by price
+          <i class="icon ion-arrow-up-c  btncolor"></i>
+          <i class="icon ion-arrow-down-c  btncolor"></i>
+        </div>
+        <div class="col col-33 sort-tabs" ng-click="orderField='lession_ratting'">Sort by Rating
+          <i class="icon ion-arrow-up-c  btncolor"></i>
+          <i class="icon ion-arrow-down-c  btncolor"></i>
+        </div>
+      </div>
+
+
+      <div class="row" style="text-align: left;" ui-sref="search_lesson_info" ng-repeat="lessonList in getLessonList | orderBy : orderField | filter:search_text">
+        <div class="col col-50">
+          <div class="search-text-heading"> {{lessonList.title_name}}</div>
+          <div class="search-text-content"> {{lessonList.description}}</div>
+        </div>
+        <div class="col col-50">
+          <img src="img/ecommerce/beauty.jpg"  style="width: 100%;">
+        </div>
+      </div>
+
+
+<!-- 
+      <div class="row" style="text-align: left;">
+        <div class="col col-50">
+          <div class="search-text-heading"> Cooagua</div>
+          <div class="search-text-content"> Making fresh pasta noodles</div>
+        </div>
+        <div class="col col-50">
+          <img src="img/ecommerce/beauty.jpg"  style="width: 100%;">
+        </div>
+      </div>
+
+
+      <div class="row" style="text-align: left;">
+        <div class="col col-50">
+          <div class="search-text-heading"> Cooagua</div>
+          <div class="search-text-content"> Making fresh pasta noodles</div>
+        </div>
+        <div class="col col-50">
+          <img src="img/ecommerce/beauty.jpg"  style="width: 100%;">
+        </div>
+      </div> -->
+
+
+     <!--  <div class="row" style="text-align: left;">
+        <div class="col col-50">
+          <div class="search-text-heading"> Cooagua</div>
+          <div class="search-text-content"> Making fresh pasta noodles</div>
+        </div>
+        <div class="col col-50">
+          <img src="img/ecommerce/beauty.jpg"  style="width: 100%;">
+        </div>
+      </div> -->
+
+
+
+
+
+
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,86 @@
+<ion-view style="overflow: auto;" class="main-bg">
+  <ion-content class="login">
+    <div class="overlay"></div>
+    <div class="content">
+        <!-- <h5 class="learn-screen-text">Walkthrough Screen 1</h5> -->
+        <div class="main_logo">
+            <img src="img/logo-no_text_wteAsset.png" style="width: 46px;" 
+            />
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+             <ion-list style="background-color:white" ui-sref="search_lesson">
+            <div class="main_box_first fontfamilyclass">
+                  <div class="main_box_hading ">Search for a lesson</div>  
+                  
+                  Search the L < ssons for lession<br>
+                  community to make one to you
+              </div>
+            </ion-list>
+
+
+            <ion-list style="background-color:white" ui-sref="ask_lesson">
+            <div class="main_box fontfamilyclass">
+                  <div class="main_box_hading">Ask for a lesson</div>  
+
+                  Can't find the lesson you wan't ask the<br>
+                  community to make one to you
+              </div>
+            </ion-list>
+
+           
+            <ion-list style="background-color:white" ui-sref="create_lesson">
+            <div class="main_box fontfamilyclass">
+                  <div class="main_box_hading">Create a l< sson</div>  
+                  
+                  Create new lessons to share with the<br>
+                  community
+              </div>
+            </ion-list>
+
+
+
+
+               <ion-list style="background-color:white" ui-sref="complete_lesson">
+            <div class="main_box fontfamilyclass">
+                  <div class="main_box_hading">Complete  l< sson</div>  
+                  
+                  Make money creating response lessons<br>
+                  others are looking for
+              </div>
+            </ion-list>
+
+
+            <ion-list style="background-color:white" ui-sref="myaccount">
+            <div class="main_box fontfamilyclass">
+                  <div class="main_box_hading">My account</div>  
+                  
+                  Edut your profile delete your account ,view <br>
+                  history contact us
+              </div>
+            </ion-list>
+
+
+
+
+
+
+            
+            <!-- <button class="button button-light" ng-click="GPlogin()">Learn More</button> -->
+        
+        <div ng-if="isGPlogin">
+            <div class="divider fontfamilyclass">
+                <div class="line left"></div>
+                <div class="line right"></div>
+                <div class="text">Connect data with Google</div>
+            </div>
+            <!-- <button class="button icon-left ion-social-google button-assertive" ui-sref="app.gpprofile">Sign Up</button> -->
+            <!-- <button class="button icon-left ion-social-google button-assertive" ui-sref="app.gpprofile"></button> -->
+        </div>
+        <!-- <p class="note">Only works on your real device, not in browser</p> -->
+    </div>
+  </ion-content>
+</ion-view>
